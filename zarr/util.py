@@ -31,7 +31,16 @@ from numcodecs.compat import (
 )
 from numcodecs.ndarray_like import NDArrayLike
 from numcodecs.registry import codec_registry
-from numcodecs.blosc import cbuffer_sizes, cbuffer_metainfo
+
+try:
+    # numcodecs 0.18+
+    from numcodecs.blosc import (
+        _cbuffer_sizes as cbuffer_sizes,
+        _cbuffer_metainfo as cbuffer_metainfo,
+    )
+except ImportError:
+    # numcodecs < 0.18
+    from numcodecs.blosc import cbuffer_sizes, cbuffer_metainfo
 from zarr.types import DIMENSION_SEPARATOR
 
 KeyType = TypeVar("KeyType")
