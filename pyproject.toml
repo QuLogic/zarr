@@ -70,16 +70,10 @@ gpu = [
 ]
 # Development extras
 test = [
-    "coverage",
     "pytest",
-    "pytest-cov",
-    "s3fs",
     "pytest-asyncio",
-    "pytest-accept",
-    "moto[s3,server]",
     "requests",
     "rich",
-    "mypy",
     "hypothesis",
     "universal-pathlib",
 ]
