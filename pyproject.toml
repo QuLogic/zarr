@@ -70,14 +70,9 @@ gpu = [
 ]
 # Development extras
 test = [
-    "coverage>=7.10",
-    # Pin possibly due to https://github.com/pytest-dev/pytest-cov/issues/693
-    "pytest<8.4",
+    "pytest",
     "pytest-asyncio",
-    "pytest-cov",
-    "pytest-accept",
     "rich",
-    "mypy",
     "hypothesis",
     "pytest-xdist",
     "packaging",
